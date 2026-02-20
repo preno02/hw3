@@ -1,9 +1,32 @@
-<h1>the places ive been</h1>
+<h1>The Places I've Been</h1>
 
 <ul>
-	<li><%= link_to "All Places", "/places" %></li>
-	<li><%= link_to "France", "/places/France" %></li>
-	<li><%= link_to "Florida", "/places/Florida" %></li>
-	<li><%= link_to "Colorado", "/places/Colorado" %></li>
-	<li><%= link_to "Montana", "/place/Montana" %></li>
+	<% @places.each do |place| %>
+		<li><%= link_to place.name, place %></li>
+	<% end %>
 </ul>
+
+<%= link_to "New Place", new_place_path %>
+
+
+<!--
+<form action="/entry">
+	<input type="text" name="Title" value="<%= @place%>
+
+	<button>Submit</button>
+</form>
+
+
+<ul>
+	
+	<li><%= link_to "France", "/places/France" %></li>
+
+	<li><%= link_to "Florida", "/places/Florida" %></li>
+
+	<li><%= link_to "Colorado", "/places/Colorado" %></li>
+
+	<li><%= link_to "Montana", "/place/Montana" %></li>
+
+	<li><%= link_to "New Places", "/places" %></li>
+</ul>
+-->

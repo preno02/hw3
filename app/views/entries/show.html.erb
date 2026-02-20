@@ -1,0 +1,12 @@
+<h1><%= @entry.place.name %></h1>
+
+<p><strong>Title:</strong> <%= @entry.title %></p>
+
+<p><strong>Description:</strong> <%= @entry.description %></p>
+
+<p><strong>Occurred on:</strong> <%= @entry.occurred_on %></p>
+
+<p><%= link_to "New Post", new_entry_path(place_id: @entry.place_id) %></p>
+
+<p><%= link_to "Back to Places", places_path %></p>
+
