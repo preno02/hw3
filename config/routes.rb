@@ -3,17 +3,21 @@ Rails.application.routes.draw do
 #   # 
 
 get("/places", :controller => "places", :action => "index")
-# get("/places/France", :controller => "places", :action => "france")
-# get("/places/Florida", :controller => "places", :action => "florida")
-# get("/places/Colorado", :controller => "places", :action => "colorado")
-# get("/place/Montana", :controller => "places", :action => "montana")
+get("/places", :controller => "places", :action => "show")
+
+# get("/places/France", :controller => "france", :action => "france")
+# get("/places/Florida", :controller => "florida", :action => "florida")
+# get("/places/Colorado", :controller => "colorado", :action => "colorado")
+# get("/place/Montana", :controller => "montana", :action => "montana")
 
 
 
 #   # Defines the root path route ("/")
 #   # get("/", { :controller => "articles", :action => "index" })
 #   # 
-  # resources "places"
-  # resources "entries"
+  resources "places"
+
+
+  resources "entries"
   
 end
